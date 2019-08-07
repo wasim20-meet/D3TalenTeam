@@ -11,9 +11,10 @@ def home():
 
 @app.route('/sent', methods=['POST'])
 def sentI():
+	print("hi")
     #check that username isn't already taken
-    add_user(request.form['name'],request.form['email'],request.form['subject'],request.form['message'])
-    return render_template('thanksforsending.html')
+	add_user(request.form['name'],request.form['email'],request.form['subject'],request.form['message'])
+	return render_template('thanksforsending.html')
 
 
 

@@ -26,8 +26,8 @@ def add_user(name,email,phone,info):
 	text = msg.as_string() # You now need to convert the MIMEMultipart object to a string to send
 	server.sendmail('talenteambot@gmail.com', send_to_email, text)
 	server.quit()
-	motherfking_customer = User(name=name, email=email, phone=phone, Info=info)
-	session.add(motherfking_customer)
+	customer = User(name=name, email=email, phone=phone, Info=info)
+	session.add(customer)
 	session.commit()
 
 def get_user(name):
